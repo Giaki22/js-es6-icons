@@ -29,7 +29,7 @@ header{
 /* NAVBAR */
 nav{
     min-height: 50px;
-    background-color: #155263;
+    background-color: #258aa6;
     color: #ffc93c;
     display: flex;
     justify-content: center;
@@ -41,8 +41,9 @@ nav{
     background: linear-gradient(180deg, rgba(255,111,60,1) 0%, rgba(255,154,60,1) 55%, rgba(255,201,60,1) 100%);
     display: flex;
     flex-flow: row wrap;
+    justify-content: center;
+    padding-top: 50px;
     gap: 25px;
-    padding: 20px;
 }
 /* CARD */
 .card{
@@ -52,7 +53,7 @@ nav{
     justify-content: center;
     width: calc(100vw / 5);
     height: 150px;
-    background-color: #155263;
+    background-color: #258aa6;
     border: 2px #ffc83c solid;
     box-shadow: 10px 10px 10px 1px #0000007e;
     gap: 10px;
@@ -63,5 +64,5 @@ nav{
 /* TEXT */
 h1{
     margin-left: 10px;
-    color: #155263;
+    color: #258aa6;
 }

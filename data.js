@@ -4,6 +4,7 @@ function printCard(obj){
 	card.classList.add("card");
 	const emoji = document.createElement("div");
 	emoji.innerHTML = `<i class="fa-solid ${obj.prefix}${obj.name}"></i>`;
+	emoji.style.color = obj.color;
 	const emojiName = document.createElement("div");
 	emojiName.innerHTML = obj.name;
 	card.appendChild(emoji);
