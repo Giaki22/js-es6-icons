@@ -1,11 +1,11 @@
 // FUNCTIONS //
-function printCard(){
+function printCard(obj){
 	const card = document.createElement("div");
 	card.classList.add("card");
 	const emoji = document.createElement("div");
-	emoji.innerHTML = `<i class="fa-solid ${emoji.prefix}${emoji.name}"></i>`;
+	emoji.innerHTML = `<i class="fa-solid ${obj.prefix}${obj.name}"></i>`;
 	const emojiName = document.createElement("div");
-	emojiName.innerHTML = emoji.name;
+	emojiName.innerHTML = obj.name;
 	card.appendChild(emoji);
 	card.appendChild(emojiName);
 	container.appendChild(card);

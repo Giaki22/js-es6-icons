@@ -49,13 +49,16 @@ nav{
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    justify-items: center;
+    justify-content: center;
     width: calc(100vw / 5);
     height: 150px;
-    padding: 0 20px;
     background-color: #155263;
     border: 2px #ffc83c solid;
     box-shadow: 10px 10px 10px 1px #0000007e;
+    gap: 10px;
+    color: #ffc83c;
+    text-transform: uppercase;
+    font-size: 1.5em;
 }
 /* TEXT */
 h1{
