@@ -26,11 +26,13 @@ function filter(){
 	}
 }
 function rainbowPossession(){
-	emoji.forEach((element) => {
-		element.color = generateRandomColor();
-	})
-	clearContainer();
-	filter();
+	const timer = setInterval(function(){
+		emoji.forEach((element) => {
+			element.color = generateRandomColor();
+		})
+		clearContainer();
+		filter();
+	}, 50);
 }
 function generateRandomColor(){
     let maxVal = 0xFFFFFF; // 16777215
