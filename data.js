@@ -1,4 +1,17 @@
-[
+// FUNCTIONS //
+function printCard(){
+	const card = document.createElement("div");
+	card.classList.add("card");
+	const emoji = document.createElement("div");
+	emoji.innerHTML = `<i class="fa-solid ${emoji.prefix}${emoji.name}"></i>`;
+	const emojiName = document.createElement("div");
+	emojiName.innerHTML = emoji.name;
+	card.appendChild(emoji);
+	card.appendChild(emojiName);
+	container.appendChild(card);
+}
+// VARIABLES //
+const emoji = [
 	{
 		name: 'cat',
 		prefix: 'fa-',
@@ -112,3 +125,7 @@
 		color: 'blue'
 	}
 ];
+// DOM //
+const container = document.getElementById("container");
+// MAIN //
+emoji.forEach(printCard);
