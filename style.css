@@ -32,7 +32,7 @@ nav{
     background-color: #258aa6;
     color: #ffc93c;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 /* CONTAINER */
@@ -44,6 +44,13 @@ nav{
     justify-content: center;
     padding-top: 50px;
     gap: 25px;
+}
+/* BUTTONS */
+#rainbow{
+    padding: 5px;
+    background: linear-gradient(90deg, rgba(255,60,60,1) 0%, rgba(255,167,60,1) 16%, rgba(245,255,60,1) 32%, rgba(86,246,60,1) 48%, rgba(60,63,203,1) 64%, rgba(114,62,163,1) 84%, rgba(255,60,60,1) 100%);
+    border: 1px solid white;
+    color: black;
 }
 /* CARD */
 .card{

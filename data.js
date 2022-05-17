@@ -16,7 +16,6 @@ function printCard(obj){
 }
 function filter(){
 	const filter = selection.value;
-	console.log(filter);
 	if (filter == "all"){
 		clearContainer();
 		emoji.forEach(printCard);
@@ -25,6 +24,21 @@ function filter(){
 		clearContainer();
 		filtered.forEach(printCard);
 	}
+}
+function rainbowPossession(){
+	emoji.forEach((element) => {
+		element.color = generateRandomColor();
+	})
+	clearContainer();
+	filter();
+}
+function generateRandomColor(){
+    let maxVal = 0xFFFFFF; // 16777215
+    let randomNumber = Math.random() * maxVal; 
+    randomNumber = Math.floor(randomNumber);
+    randomNumber = randomNumber.toString(16);
+    let randColor = randomNumber.padStart(6, 0);   
+    return `#${randColor.toUpperCase()}`
 }
 // VARIABLES //
 const emoji = [
@@ -144,6 +158,8 @@ const emoji = [
 // DOM //
 const container = document.getElementById("container");
 const selection = document.getElementById("filter");
+const button = document.getElementById("rainbow");
 // MAIN //
 emoji.forEach(printCard);
 selection.addEventListener("change", filter);
+button.addEventListener("click", rainbowPossession);
