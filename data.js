@@ -1,4 +1,7 @@
 // FUNCTIONS //
+function clearContainer(){
+	container.innerHTML = " ";
+}
 function printCard(obj){
 	const card = document.createElement("div");
 	card.classList.add("card");
@@ -10,6 +13,18 @@ function printCard(obj){
 	card.appendChild(emoji);
 	card.appendChild(emojiName);
 	container.appendChild(card);
+}
+function filter(){
+	const filter = selection.value;
+	console.log(filter);
+	if (filter == "all"){
+		clearContainer();
+		emoji.forEach(printCard);
+	} else {
+		const filtered = emoji.filter(emoji => emoji.type == filter);
+		clearContainer();
+		filtered.forEach(printCard);
+	}
 }
 // VARIABLES //
 const emoji = [
@@ -128,5 +143,7 @@ const emoji = [
 ];
 // DOM //
 const container = document.getElementById("container");
+const selection = document.getElementById("filter");
 // MAIN //
 emoji.forEach(printCard);
+selection.addEventListener("change", filter);
